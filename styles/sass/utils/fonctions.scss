@@ -1,0 +1,17 @@
+@function color_divIndex ($color) {
+    $color: darken($color, 14.5%);
+    @return $color;
+    //obtient #D2D2D2 à partir de #F7F7F7
+}
+
+@function color_subHeader ($color) {
+    $color: darken($color, 5%);
+    @return $color;
+    //obtient #EAEAEA à partir de #F7F7F7
+}
+
+@function color_footer ($color) {
+    $color: darken($color, 76%);
+    @return $color;
+    //obtient #353535 à partir de #F7F7F7
+}
