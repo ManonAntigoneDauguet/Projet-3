@@ -1,0 +1,10 @@
+.localisation {
+    background-color: color_subHeader($background-color);
+    height: 115px;
+    box-shadow: inset 0px 4.6px 9.2px rgba(0, 0, 0, 0.15);  
+    font-weight: 500;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
