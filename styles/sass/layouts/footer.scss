@@ -4,7 +4,7 @@ footer {
     padding-top: 57px;
     padding-bottom: 57px;
     padding-left: 50px;
-    padding-bottom: 57px;
+    padding-bottom: 50px;
     img {
         height: 41.4px;
         filter: invert(100%);
@@ -18,17 +18,13 @@ footer {
     gap: 16px;
     padding-top: 25px;
     &__element {
-        // display: flex;
-        // flex-direction: row;
-        // align-items: center;
-        // gap: 25px;
         display: grid;
-        grid-template-columns: 65px auto;
+        grid-template-columns: 58px auto;
         i {
             columns: 1 / 2;
-            font-size: 35px;
+            font-size: 30px;
             position: relative;
-            top: 3px;
+            top: 8px;
         }
         span {
             columns: 2 / 3;
@@ -36,6 +32,12 @@ footer {
         .icon-rotate {
             transform: rotate(-35deg);
         }
+    }
+    &--1 {
+        font-weight: 500;
+    }
+    &--2 {
+        font-weight: 400;
     }
     a {
         color: white;
