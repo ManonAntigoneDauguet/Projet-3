@@ -89,42 +89,45 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .restaurant {
-            img {
-                height: 153px;
-                object-fit: cover;
-                object-position: 50% 100%;
-                width: 100%;
-                border-top-left-radius: 14px;
-                border-top-right-radius: 14px;
+    }
+}
+.restaurant {
+    img {
+        height: 153px;
+        object-fit: cover;
+        object-position: 50% 100%;
+        width: 100%;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+    .portrait_picture {
+        object-position: 50% 62%;
+    }
+    &__content {
+        padding: 13px 30px 13px 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        i {
+            font-size: 21px;
+            font-weight: 300;
+        }   
+        img { 
+            height: 16px;
+        }     
+        .restaurant__txt {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            &__title {
+                font-weight: 700;
+                font-size: 18px;
             }
-            .portrait_picture {
-                object-position: 50% 62%;
-            }
-            &__content {
-                padding: 13px 30px 13px 13px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                background-color: white;
-                border-bottom-left-radius: 14px;
-                border-bottom-right-radius: 14px;
-            }
-            &__txt {
-                display: flex;
-                flex-direction: column;
-                gap: 2px;
-                &__title {
-                    font-weight: 700;
-                    font-size: 18px;
-                }
-                &__subtitle {
-                    font-size: 17px;
-                    font-weight: 300;
-                }
-            }
-            i {
-                font-size: 21px;
+            &__subtitle {
+                font-size: 17px;
                 font-weight: 300;
             }
         }
