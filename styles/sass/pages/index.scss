@@ -70,3 +70,40 @@
         }
     }
 }
+
+.restaurants {
+    background-color: $background-color;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    .list_restaurants {
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+        .restaurant {
+            img {
+                height: 354px;
+                object-fit: cover;
+                width: 100%;
+                border-top-left-radius: 34px;
+                border-top-right-radius: 34px;
+            }
+            &__content {
+                padding: 10px 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: white;
+                border-bottom-left-radius: 34px;
+                border-bottom-right-radius: 34px;
+            }
+            &__txt {
+                display: flex;
+                flex-direction: column;
+                &__title {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
