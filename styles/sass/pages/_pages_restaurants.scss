@@ -24,6 +24,12 @@
             top: 0;
         }
     }
+    .button--main { // reste du code concerné dans le dossier "components"
+        margin-top: 45px;
+        a {
+            padding: 16px 48px;
+        }
+    }
 }
 
 .carte_restaurant__menu {
