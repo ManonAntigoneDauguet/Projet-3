@@ -1,9 +1,8 @@
 footer {
     background-color: color_footer($background-color);
     color: white;
-    margin-top: 40px;
     padding: 22px 25px;
-    img {
+    .logo {
         height: 18px;
         filter: invert(100%);
         padding-bottom: 9px;
@@ -18,17 +17,14 @@ footer {
     &__element {
         display: grid;
         grid-template-columns: 22px auto;
-        i {
+        img {
             columns: 1 / 2;
-            font-size: 13px;
+            height: 13px;
             position: relative;
             top: 3px;
         }
         span {
             columns: 2 / 3;
-        }
-        .icon-rotate {
-            transform: rotate(-35deg);
         }
     }
     &--1 {
