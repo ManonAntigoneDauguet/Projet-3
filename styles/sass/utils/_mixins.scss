@@ -1,11 +1,11 @@
 /* MIXINS LIEES AUX MEDIA QUERIES */
-@mixin laptop-only {
-    @media all and (min-with: map-get($breakpoints, laptop)) {
+@mixin laptop-and-more {
+    @media all and (min-width: map-get($breakpoints, laptop)) {
         @content;
     }
 }
-@mixin desktop-only {
-    @media all and (min-with: map-get($breakpoints, desktop)) {
+@mixin desktop-and-more {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
 }

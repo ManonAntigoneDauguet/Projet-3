@@ -6,6 +6,19 @@ footer {
         height: 18px;
         filter: invert(100%);
         padding-bottom: 9px;
+        @include desktop-and-more {
+            padding-bottom: 0;
+            padding-left: 40px;
+        }
+    }
+    @include desktop-and-more {
+        height: 114px;
+        padding-bottom: 31px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;        
+        padding-right: 70px;
+        gap: 50px;
     }
 }
 
@@ -35,5 +48,22 @@ footer {
     }
     a {
         color: white;
+    }
+    @include desktop-and-more {
+        flex-direction: row;
+        gap: 12px;
+    }
+    &--2 {
+        @include desktop-and-more {
+            gap: 22px;
+        }
+    }
+}
+
+.footer_links_content {
+    @include desktop-and-more {
+        display: flex;    
+        flex-direction: row;  
+        gap: 50px;
     }
 }
