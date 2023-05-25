@@ -1,9 +1,18 @@
 header {
+    position: relative;
     background-color: white;
     text-align: center;
     padding-top: 14px;
     padding-bottom: 5px;
     img {
         height: 30px;
+    }
+}
+
+.back_link {
+    position: absolute;
+    left: 23px;
+    img {
+        height: 15px;
     }
 }

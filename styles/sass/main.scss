@@ -1,9 +1,16 @@
-@import "../sass/utils/variables.scss";
-@import "../sass/utils/mixins.scss";
-@import "../sass/utils/fonctions.scss";
+// Outils
+@import "../sass/utils/variables";
+@import "../sass/utils/mixins";
+@import "../sass/utils/fonctions";
 
-@import "../sass/base.scss";
-@import "../sass/layouts/header.scss";
-@import "../sass/layouts/footer.scss";
+// Base et layouts
+@import "../sass/base";
+@import "../sass/layouts/header";
+@import "../sass/layouts/footer";
 
-@import "../sass/pages/index.scss";
+// Components
+@import "../sass/components/buttons";
+
+// Pages
+@import "../sass/pages/index";
+@import "../sass/pages/pages_restaurants";

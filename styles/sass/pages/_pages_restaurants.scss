@@ -1,0 +1,80 @@
+.illustration_restaurant {
+    position: relative;
+    height: 220px;
+    img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;        
+    }
+}
+
+.carte_restaurant {
+    background-color: $background-color;
+    padding: 10px 13px 40px 13px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    &__title {
+        position: relative;
+        i {
+            font-size: 27px;
+            position: absolute;
+            right: 30px;
+            top: 5px;
+        }
+    }
+    .button--main { // reste du code concerné dans le dossier "components"
+        margin-top: 45px;
+        a {
+            padding: 16px 48px;
+        }
+    }
+}
+
+.carte_restaurant__menu {
+    position: relative;
+    margin-top: 40px;
+    &__title {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 22px;
+    }
+    &__subtitle {
+        width: 40px;
+        position: absolute;
+        top: 17px;
+        left: 0px;
+        border: 2px solid $color--tertiary;
+    }
+}
+
+.list_dish {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .dish {
+        position: relative;
+        background-color: white;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 12px 47px 12px 15px;
+        &__price {
+            position: absolute;
+            right: 16px;
+            top: 18px;
+            font-weight: 700;
+        }
+        &__name {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        &__description {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+}
