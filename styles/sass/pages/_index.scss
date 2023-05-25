@@ -154,9 +154,6 @@
 }
 
 .restaurants, .functioning {
-    @include desktop-and-more {
-        
-    }
     &__content {
         @include desktop-and-more {
             min-width: map-get($breakpoints, laptop);
