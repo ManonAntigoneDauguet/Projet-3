@@ -1,4 +1,9 @@
 /* MIXINS LIEES AUX MEDIA QUERIES */
+@mixin laptop-only {
+    @media all and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
 @mixin laptop-and-more {
     @media all and (min-width: map-get($breakpoints, laptop)) {
         @content;
