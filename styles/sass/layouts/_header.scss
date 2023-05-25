@@ -6,6 +6,13 @@ header {
     padding-bottom: 5px;
     img {
         height: 30px;
+        @include desktop-and-more {
+            height: 34px;
+        }
+    }
+    @include laptop-and-more {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 

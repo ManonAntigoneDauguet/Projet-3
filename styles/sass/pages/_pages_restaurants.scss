@@ -2,26 +2,39 @@
     position: relative;
     height: 220px;
     img {
-    height: 275px;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;        
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        @include desktop-and-more {
+            height: 420px;
+            object-position: 50% 60%;
+        }        
+    }
+    @include desktop-and-more {
+        height: 368px;
     }
 }
 
 .carte_restaurant {
     background-color: $background-color;
     padding: 10px 13px 40px 13px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     &__title {
-        position: relative;
-        i {
-            font-size: 27px;
-            position: absolute;
-            right: 30px;
-            top: 5px;
+        padding-right: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            height: 21px;
+        }
+        @include desktop-and-more {
+            padding-top: 20px;
+            padding-bottom: 25px;
+            justify-content: center;
+            gap: 24px;
         }
     }
     .button--main { // reste du code concerné dans le dossier "components"
@@ -30,11 +43,15 @@
             padding: 16px 48px;
         }
     }
+    @include desktop-and-more {
+        min-width: map-get($breakpoints, laptop);
+        max-width: 1087px; 
+        margin: auto;
+    }
 }
 
 .carte_restaurant__menu {
     position: relative;
-    margin-top: 40px;
     &__title {
         font-size: 16px;
         font-weight: 300;
@@ -46,6 +63,16 @@
         top: 17px;
         left: 0px;
         border: 2px solid $color--tertiary;
+        @include desktop-and-more {
+            left: 210px;
+        }
+    }
+    + .carte_restaurant__menu {
+        margin-top: 40px;
+    }
+    @include desktop-and-more {
+        padding-left: 210px;
+        padding-right: 210px;
     }
 }
 
