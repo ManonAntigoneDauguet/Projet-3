@@ -1,3 +1,4 @@
+// *********** Photo du restaurant en présentation **********//
 .illustration_restaurant {
     position: relative;
     height: 220px;
@@ -17,6 +18,7 @@
     }
 }
 
+//*************** Contenu écrit de la page ***************//
 .carte_restaurant {
     background-color: $background-color;
     padding: 10px 13px 40px 13px;
@@ -53,6 +55,7 @@
     }
 }
 
+//************** Sections "entrées", "plats" et "désserts" ******//
 .carte_restaurant__menu {
     position: relative;
     &__title {
@@ -106,5 +109,49 @@
             font-size: 15px;
             font-weight: 300;
         }
+    }
+}
+
+//*********** Animation de l'apparition des plats ******//
+.starters {
+    h3, hr {
+        @include opacity_appearance;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 400ms;
+    }
+}
+
+.main_course {
+    h3, hr {
+        @include opacity_appearance; 
+        animation-delay: 0ms;   
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 800ms;
+    }
+}
+
+.dessert {
+    h3, hr {
+        @include opacity_appearance;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 1200ms;
+    }
+}
+
+
+@keyframes appearance_dish {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

@@ -1,4 +1,4 @@
-/* MIXINS LIEES AUX MEDIA QUERIES */
+/* Mixins liées aux media queries */
 @mixin laptop-only {
     @media all and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
         @content;
@@ -13,4 +13,12 @@
     @media all and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
+}
+
+/* Mixins liées aux animation */
+@mixin opacity_appearance {
+    opacity: 0;
+    transform-origin: left;
+    animation: appearance_dish 1000ms both;
+    animation-timing-function: ease-in-out; 
 }
