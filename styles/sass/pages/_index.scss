@@ -1,9 +1,9 @@
 .presentation {
     background-color: $background-color;
-    padding-bottom: 57px;
+    padding-bottom: 40px;
     &__localisation {
         background-color: color_subHeader($background-color);
-        height: 50px;
+        height: 45px;
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);  
         font-weight: 500;
         display: flex;
@@ -29,6 +29,11 @@
             font-size: 18px;
             padding: 0 17px 27px 17px;
         }          
+    }
+    .button--main {
+        a {
+        padding: 13px 18px;            
+        }
     }
 }
 
