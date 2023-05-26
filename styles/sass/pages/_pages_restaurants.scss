@@ -142,6 +142,7 @@
         }
         .dish__checkbox {
             opacity: 1;
+            margin-left: 50px;
             transition: all 400ms ease-in-out 200ms;
         }
     }   
@@ -157,49 +158,46 @@
     } 
 }
 
-
-
-
 //*********** Animation de l'apparition des plats ******//
-// .starters {
-//     h3, hr {
-//         @include opacity_appearance;   
-//         animation-delay: 0ms;     
-//     }
-//     .dish {
-//         @include opacity_appearance; 
-//         animation-delay: 400ms;
-//     }
-// }
+.starters {
+    h3, hr {
+        @include opacity_appearance;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 400ms;
+    }
+}
 
-// .main_course {
-//     h3, hr {
-//         @include opacity_appearance; 
-//         animation-delay: 0ms;   
-//     }
-//     .dish {
-//         @include opacity_appearance; 
-//         animation-delay: 800ms;
-//     }
-// }
+.main_course {
+    h3, hr {
+        @include opacity_appearance; 
+        animation-delay: 0ms;   
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 800ms;
+    }
+}
 
-// .dessert {
-//     h3, hr {
-//         @include opacity_appearance;   
-//         animation-delay: 0ms;     
-//     }
-//     .dish {
-//         @include opacity_appearance; 
-//         animation-delay: 1200ms;
-//     }
-// }
+.dessert {
+    h3, hr {
+        @include opacity_appearance;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include opacity_appearance; 
+        animation-delay: 1200ms;
+    }
+}
 
 
-// @keyframes appearance_dish {
-//     from {
-//         opacity: 0;
-//     }
-//     to {
-//         opacity: 1;
-//     }
-// }
+@keyframes appearance_dish {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
