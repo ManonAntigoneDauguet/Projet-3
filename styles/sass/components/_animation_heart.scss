@@ -1,0 +1,23 @@
+.animation_heart {
+    position: relative;
+    .heart--empty {
+        height: 21px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+    .heart--filled {
+        height: 21px;
+        opacity: 0;
+        transform-origin: bottom;
+        transition: all 400ms ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:hover {
+        .heart--filled {
+            opacity: 1;
+        }
+    }
+}

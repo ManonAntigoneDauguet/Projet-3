@@ -23,16 +23,16 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     &__title {
-        padding-right: 30px;
+        padding-right: 45px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img {
-            height: 21px;
+        .animation_heart {
+            bottom: 10px;
         }
         @include desktop-and-more {
             padding-top: 20px;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
             justify-content: center;
             gap: 24px;
         }
