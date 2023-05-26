@@ -27,7 +27,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .animation_heart {
+        .animation_heart { 
+            // reste du code concerné dans le dossier "components"
             bottom: 10px;
         }
         @include desktop-and-more {
@@ -37,7 +38,8 @@
             gap: 24px;
         }
     }
-    .button--main { // reste du code concerné dans le dossier "components"
+    .button--main { 
+        // reste du code concerné dans le dossier "components"
         margin-top: 45px;
         top: 10px;
         a {

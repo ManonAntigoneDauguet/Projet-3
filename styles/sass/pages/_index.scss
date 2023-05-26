@@ -1,3 +1,4 @@
+// ********* 1ère section : Présentation ********//
 .presentation {
     background-color: $background-color;
     padding-bottom: 40px;
@@ -31,12 +32,30 @@
         }          
     }
     .button--main {
+        // reste du code concerné dans le dossier "components"
         a {
         padding: 13px 18px;            
         }
     }
 }
 
+// 2ème et 3ème section : Fonctionnement et Restaurants *******//
+.restaurants, .functioning {
+    &__content {
+        @include desktop-and-more {
+            min-width: map-get($breakpoints, laptop);
+            max-width: 1087px; 
+            margin: auto;
+        }        
+    }
+    h2 {
+        @include desktop-and-more {
+            padding-bottom: 20px;
+        }        
+    }
+}
+
+// ********** 2ème section : Fonctionnement *********//
 .functioning {
     margin-top: 47px;
     margin-bottom: 47px;
@@ -85,6 +104,7 @@
     }
 }
 
+// ********* 3ème section : Restaurants *************//
 .restaurants {
     background-color: $background-color;
     padding: 25px 20px 65px 20px;
@@ -106,7 +126,8 @@
     }
 }
 .restaurant {
-    img {
+    position: relative;
+    &__illustration {
         height: 168px;
         object-fit: cover;
         object-position: 50% 100%;
@@ -125,7 +146,7 @@
         }
     }
     &__content {
-        padding: 13px 30px 13px 13px;
+        padding: 10px 30px 14px 13px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -158,17 +179,12 @@
     }
 }
 
-.restaurants, .functioning {
-    &__content {
-        @include desktop-and-more {
-            min-width: map-get($breakpoints, laptop);
-            max-width: 1087px; 
-            margin: auto;
-        }        
-    }
-    h2 {
-        @include desktop-and-more {
-            padding-bottom: 20px;
-        }        
+.restaurant__favorite {
+    display: flex;
+    justify-content: end;
+    .animation_heart { 
+        // reste du code concerné dans le dossier "components"
+        right: 45px;
+        bottom: 50px;
     }
 }
