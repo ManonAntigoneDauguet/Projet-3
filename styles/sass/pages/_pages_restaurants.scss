@@ -92,66 +92,114 @@
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         display: flex;
-        flex-direction: column;
-        gap: 2px;
-        padding: 12px 47px 12px 15px;
+        justify-content: space-between;
+        height: 69px;
+        &__txt {
+            padding: 12px 15px;   
+            line-height: 21px;              
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &__name {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            &__description {
+                font-size: 15px;
+                font-weight: 300;
+            }               
+        }
         &__price {
             position: absolute;
-            right: 16px;
+            right: 15px;
             top: 18px;
             font-weight: 700;
+            transform: translateX(0);
         }
-        &__name {
-            font-weight: 500;
-            font-size: 18px;
-        }
-        &__description {
-            font-size: 15px;
-            font-weight: 300;
+        &__checkbox {
+            opacity: 0;
+            width: 59px;
+            height: 69px;
+            background-color: $color--tertiary;
+            box-sizing: border-box;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align: center;
+            padding: 24px 10px;
+            img {
+                height: 20px;
+            }
         }
     }
 }
+
+//********** Animation de la sélection des plats ********//
+.dish {
+    &:hover {
+        .dish__price {
+            transform: translateX(-59px);
+            transition: all 400ms ease-in-out;
+        }
+        .dish__checkbox {
+            opacity: 1;
+            transition: all 400ms ease-in-out 200ms;
+        }
+    }   
+    &:not(:hover) {
+        .dish__price {
+            transform: translateX(0);
+            transition: all 400ms ease-in-out 200ms;
+        }
+        .dish__checkbox {
+            opacity: 0;
+            transition: all 400ms ease-in-out 0ms;
+        }
+    } 
+}
+
+
+
 
 //*********** Animation de l'apparition des plats ******//
-.starters {
-    h3, hr {
-        @include opacity_appearance;   
-        animation-delay: 0ms;     
-    }
-    .dish {
-        @include opacity_appearance; 
-        animation-delay: 400ms;
-    }
-}
+// .starters {
+//     h3, hr {
+//         @include opacity_appearance;   
+//         animation-delay: 0ms;     
+//     }
+//     .dish {
+//         @include opacity_appearance; 
+//         animation-delay: 400ms;
+//     }
+// }
 
-.main_course {
-    h3, hr {
-        @include opacity_appearance; 
-        animation-delay: 0ms;   
-    }
-    .dish {
-        @include opacity_appearance; 
-        animation-delay: 800ms;
-    }
-}
+// .main_course {
+//     h3, hr {
+//         @include opacity_appearance; 
+//         animation-delay: 0ms;   
+//     }
+//     .dish {
+//         @include opacity_appearance; 
+//         animation-delay: 800ms;
+//     }
+// }
 
-.dessert {
-    h3, hr {
-        @include opacity_appearance;   
-        animation-delay: 0ms;     
-    }
-    .dish {
-        @include opacity_appearance; 
-        animation-delay: 1200ms;
-    }
-}
+// .dessert {
+//     h3, hr {
+//         @include opacity_appearance;   
+//         animation-delay: 0ms;     
+//     }
+//     .dish {
+//         @include opacity_appearance; 
+//         animation-delay: 1200ms;
+//     }
+// }
 
 
-@keyframes appearance_dish {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+// @keyframes appearance_dish {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
