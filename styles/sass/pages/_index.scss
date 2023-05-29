@@ -1,9 +1,10 @@
+// ********* 1ère section : Présentation ********//
 .presentation {
     background-color: $background-color;
-    padding-bottom: 57px;
+    padding-bottom: 40px;
     &__localisation {
         background-color: color_subHeader($background-color);
-        height: 50px;
+        height: 45px;
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);  
         font-weight: 500;
         display: flex;
@@ -30,8 +31,31 @@
             padding: 0 17px 27px 17px;
         }          
     }
+    .button--main {
+        // reste du code concerné dans le dossier "components"
+        a {
+        padding: 13px 18px;            
+        }
+    }
 }
 
+// 2ème et 3ème section : Fonctionnement et Restaurants *******//
+.restaurants, .functioning {
+    &__content {
+        @include desktop-and-more {
+            min-width: map-get($breakpoints, laptop);
+            max-width: 1087px; 
+            margin: auto;
+        }        
+    }
+    h2 {
+        @include desktop-and-more {
+            padding-bottom: 20px;
+        }        
+    }
+}
+
+// ********** 2ème section : Fonctionnement *********//
 .functioning {
     margin-top: 47px;
     margin-bottom: 47px;
@@ -80,6 +104,7 @@
     }
 }
 
+// ********* 3ème section : Restaurants *************//
 .restaurants {
     background-color: $background-color;
     padding: 25px 20px 65px 20px;
@@ -101,7 +126,8 @@
     }
 }
 .restaurant {
-    img {
+    position: relative;
+    &__illustration {
         height: 168px;
         object-fit: cover;
         object-position: 50% 100%;
@@ -120,7 +146,7 @@
         }
     }
     &__content {
-        padding: 13px 30px 13px 13px;
+        padding: 10px 30px 14px 13px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -153,17 +179,55 @@
     }
 }
 
-.restaurants, .functioning {
-    &__content {
-        @include desktop-and-more {
-            min-width: map-get($breakpoints, laptop);
-            max-width: 1087px; 
-            margin: auto;
-        }        
-    }
-    h2 {
-        @include desktop-and-more {
-            padding-bottom: 20px;
-        }        
+.restaurant__favorite {
+    display: flex;
+    justify-content: end;
+    .animation_heart { 
+        // reste du code concerné dans le dossier "components"
+        right: 45px;
+        bottom: 50px;
     }
 }
+
+/******** Animation loader *************/
+.index_body header, .index_body footer, .index_body section {
+    opacity: 0;
+    animation: opacity_appearance 1000ms both;
+    animation-timing-function: ease-in-out; 
+    animation-delay: 3s;
+}
+.index_body .loader_main {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: opacity_disappaerance 400ms both 3s;
+    @include laptop-and-more {
+        top: 50%;
+    }
+    i {
+        transform: rotate(0deg);
+        font-size: 100px;
+        z-index: 99;
+        @include laptop-and-more {
+            font-size: 300px;
+        }
+    }
+    &--one {
+        color: $color--primary;
+        position: absolute;
+        animation: primary_loader 1s ease-in-out;
+        animation-iteration-count: 3;
+    }
+    &--two {
+        opacity: 0.2;
+        color: $color--secondary;
+        position: relative;
+        animation: secondary_loader 1s ease-in-out;
+        animation-iteration-count: 3;
+    }
+}
+
+
+

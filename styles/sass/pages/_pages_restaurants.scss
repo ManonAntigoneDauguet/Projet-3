@@ -1,3 +1,4 @@
+// *********** Photo du restaurant en présentation **********//
 .illustration_restaurant {
     position: relative;
     height: 220px;
@@ -17,28 +18,32 @@
     }
 }
 
+//*************** Contenu écrit de la page ***************//
 .carte_restaurant {
     background-color: $background-color;
     padding: 10px 13px 40px 13px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     &__title {
-        padding-right: 30px;
+        padding-right: 45px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        img {
-            height: 21px;
+        .animation_heart { 
+            // reste du code concerné dans le dossier "components"
+            bottom: 10px;
         }
         @include desktop-and-more {
             padding-top: 20px;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
             justify-content: center;
             gap: 24px;
         }
     }
-    .button--main { // reste du code concerné dans le dossier "components"
+    .button--main { 
+        // reste du code concerné dans le dossier "components"
         margin-top: 45px;
+        top: 10px;
         a {
             padding: 16px 48px;
         }
@@ -50,6 +55,7 @@
     }
 }
 
+//************** Sections "entrées", "plats" et "désserts" ******//
 .carte_restaurant__menu {
     position: relative;
     &__title {
@@ -86,22 +92,102 @@
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         display: flex;
-        flex-direction: column;
-        gap: 2px;
-        padding: 12px 47px 12px 15px;
+        justify-content: space-between;
+        height: 69px;
+        &__txt {
+            padding: 12px 15px;   
+            line-height: 21px;              
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &__name {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            &__description {
+                font-size: 15px;
+                font-weight: 300;
+            }               
+        }
         &__price {
             position: absolute;
-            right: 16px;
+            right: 15px;
             top: 18px;
             font-weight: 700;
+            transform: translateX(0);
         }
-        &__name {
-            font-weight: 500;
-            font-size: 18px;
+        &__checkbox {
+            opacity: 0;
+            width: 59px;
+            height: 69px;
+            background-color: $color--tertiary;
+            box-sizing: border-box;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align: center;
+            padding: 24px 10px;
+            img {
+                height: 20px;
+            }
         }
-        &__description {
-            font-size: 15px;
-            font-weight: 300;
+    }
+}
+
+//********** Animation de la sélection des plats ********//
+.dish {
+    &:hover {
+        .dish__price {
+            transform: translateX(-59px);
+            transition: all 400ms ease-in-out;
         }
+        .dish__checkbox {
+            opacity: 1;
+            margin-left: 50px;
+            transition: all 400ms ease-in-out 200ms;
+        }
+    }   
+    &:not(:hover) {
+        .dish__price {
+            transform: translateX(0);
+            transition: all 400ms ease-in-out 200ms;
+        }
+        .dish__checkbox {
+            opacity: 0;
+            transition: all 400ms ease-in-out 0ms;
+        }
+    } 
+}
+
+//*********** Animation de l'apparition des plats ******//
+.starters {
+    h3, hr {
+        @include appearance_dish;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 400ms;
+    }
+}
+
+.main_course {
+    h3, hr {
+        @include appearance_dish; 
+        animation-delay: 0ms;   
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 800ms;
+    }
+}
+
+.dessert {
+    h3, hr {
+        @include appearance_dish;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 1200ms;
     }
 }

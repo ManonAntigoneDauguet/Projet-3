@@ -38,7 +38,10 @@
         <div class="carte_restaurant">
             <div class="carte_restaurant__title">
                 <h1>Le délice des sens</h1>
-                <img src="../images/icons/heart.svg" alt="icone de coeur">
+                <div class="animation_heart">
+                    <img src="../images/icons/heart.svg" alt="icone de coeur" class="heart--empty">
+                    <img src="../images/icons/colored-heart.svg" alt="icone de coeur rempli" class="heart--filled">
+                </div>
             </div>
 
             <section class="carte_restaurant__menu starters">
@@ -46,19 +49,36 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Tartare de thon</span>
-                        <span class="dish__description">Assaisonné au yuzu</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Tartare de thon</span><br>
+                            <span class="dish__description">Assaisonné au yuzu</span>
+                        </div>    
                         <p class="dish__price">25€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Bouchée de homard croustillant</span>
-                        <span class="dish__description">Et sa farandole de petits légumes</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Bouchée de homard croustillant</span><br>
+                            <span class="dish__description">Et sa farandole de petits légumes</span>
+                        </div>    
                         <p class="dish__price">35€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Poulet rôtis aux herbes de Provence</span>
-                        <span class="dish__description">Et sa crème de truffe</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Poulet rôtis aux herbes de Provence</span><br>
+                            <span class="dish__description">Et sa crème de truffe</span>
+                        </div>    
                         <p class="dish__price">40€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -68,19 +88,36 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Poulet rôti aux herbes de Provence</span>
-                        <span class="dish__description">Et sa crème de truffe</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Poulet rôti aux herbes de Provence</span><br>
+                            <span class="dish__description">Et sa crème de truffe</span>
+                        </div>    
                         <p class="dish__price">40€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Langouste rôtie</span>
-                        <span class="dish__description">Et ses légumes de saison</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Langouste rôtie</span><br>
+                            <span class="dish__description">Et ses légumes de saison</span>
+                        </div>    
                         <p class="dish__price">35€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Côte de bœuf Angus</span>
-                        <span class="dish__description">Et sa purée de panais</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Côte de bœuf Angus</span><br>
+                            <span class="dish__description">Et sa purée de panais</span>
+                        </div>    
                         <p class="dish__price">44€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -90,25 +127,43 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Œuf au plat</span>
-                        <span class="dish__description">Assaisonné à la truffe sur lit de caviar</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Œuf au plat</span><br>
+                            <span class="dish__description">Assaisonné à la truffe sur lit de caviar</span>
+                        </div>    
                         <p class="dish__price">76€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Crème brulée</span>
-                        <span class="dish__description">Revisitée</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Crème brulée</span><br>
+                            <span class="dish__description">Revisitée</span>
+                        </div>    
                         <p class="dish__price">22€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Tiramisu</span>
-                        <span class="dish__description">À la noisette</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Tiramisu</span><br>
+                            <span class="dish__description">À la noisette</span>
+                        </div>    
                         <p class="dish__price">23€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <div class="button--main">
-                <a href="#">Commander</a>
+                <a href="#" class="button--main__normal">Commander</a><br>
+                <a href="#" class="button--main__clearer">Commander</a>
             </div> 
         </div>
     </main>

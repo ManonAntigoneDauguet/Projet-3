@@ -38,7 +38,10 @@
         <div class="carte_restaurant">
             <div class="carte_restaurant__title">
                 <h1>À la française</h1>
-                <img src="../images/icons/heart.svg" alt="icone de coeur">
+                <div class="animation_heart">
+                    <img src="../images/icons/heart.svg" alt="icone de coeur" class="heart--empty">
+                    <img src="../images/icons/colored-heart.svg" alt="icone de coeur rempli" class="heart--filled">
+                </div>
             </div>
 
             <section class="carte_restaurant__menu starters">
@@ -46,19 +49,36 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Tartare de poulpe acidulé</span>
-                        <span class="dish__description">Aux zestes d'orange</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Tartare de poulpe acidulé</span><br>
+                            <span class="dish__description">Aux zestes d'orange</span>
+                        </div>    
                         <p class="dish__price">25€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Velouté de légumes d'antan</span>
-                        <span class="dish__description">Carotte, panais, topinambour</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Velouté de légumes d'antan</span><br>
+                            <span class="dish__description">Carotte, panais, topinambour</span>
+                        </div>    
                         <p class="dish__price">35€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Soupe à l'oignon</span>
-                        <span class="dish__description">Revisitée</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Soupe à l'oignon</span><br>
+                            <span class="dish__description">Revisitée</span>
+                        </div>    
                         <p class="dish__price">20€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -68,19 +88,36 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Coquilles Saint-Jacques</span>
-                        <span class="dish__description">Accompagné d'une purée de panais</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Coquilles Saint-Jacques</span><br>
+                            <span class="dish__description">Accompagné d'une purée de panais</span>
+                        </div>    
                         <p class="dish__price">40€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Magret de canard</span>
-                        <span class="dish__description">Et parmentier de pommes de terre</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Magret de canard</span><br>
+                            <span class="dish__description">Et parmentier de pommes de terre</span>
+                        </div>    
                         <p class="dish__price">35€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Pigeonneau d'Ille-et-Vilaine</span>
-                        <span class="dish__description">Sur son lit de gnocchis aux légumes</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Pigeonneau d'Ille-et-Vilaine</span><br>
+                            <span class="dish__description">Sur son lit de gnocchis aux légumes</span>
+                        </div>    
                         <p class="dish__price">44€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -90,26 +127,44 @@
                 <hr class="carte_restaurant__menu__subtitle">
                 <div class="list_dish">
                     <div class="dish">
-                        <span class="dish__name">Pétales de violettes glacés</span>
-                        <span class="dish__description">Et purée de noisettes</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Pétales de violettes glacés</span><br>
+                            <span class="dish__description">Et purée de noisettes</span>
+                        </div>    
                         <p class="dish__price">18€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Fondant au chocolat</span>
-                        <span class="dish__description">Revisité</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Fondant au chocolat</span><br>
+                            <span class="dish__description">Revisité</span>
+                        </div>    
                         <p class="dish__price">22€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
+
                     <div class="dish">
-                        <span class="dish__name">Millefeuille croustillant</span>
-                        <span class="dish__description">Myrtilles et pâte d'amande</span>
+                        <div class="dish__txt">
+                            <span class="dish__name">Millefeuille croustillant</span><br>
+                            <span class="dish__description">Myrtilles et pâte d'amande</span>
+                        </div>    
                         <p class="dish__price">23€</p>
+                        <div class="dish__checkbox">
+                            <img src="../images/icons/Check.svg">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <div class="button--main">
-                <a href="#">Commander</a>
-            </div> 
+                <a href="#" class="button--main__normal">Commander</a><br>
+                <a href="#" class="button--main__clearer">Commander</a>
+            </div>  
         </div>
     </main>
 
