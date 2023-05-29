@@ -204,7 +204,7 @@
     animation-delay: 3s;
 }
 .index_body .loader_main {
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 20%;
     transform: translate(-50%, -50%);
