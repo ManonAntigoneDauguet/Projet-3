@@ -161,43 +161,33 @@
 //*********** Animation de l'apparition des plats ******//
 .starters {
     h3, hr {
-        @include opacity_appearance;   
+        @include appearance_dish;   
         animation-delay: 0ms;     
     }
     .dish {
-        @include opacity_appearance; 
+        @include appearance_dish; 
         animation-delay: 400ms;
     }
 }
 
 .main_course {
     h3, hr {
-        @include opacity_appearance; 
+        @include appearance_dish; 
         animation-delay: 0ms;   
     }
     .dish {
-        @include opacity_appearance; 
+        @include appearance_dish; 
         animation-delay: 800ms;
     }
 }
 
 .dessert {
     h3, hr {
-        @include opacity_appearance;   
+        @include appearance_dish;   
         animation-delay: 0ms;     
     }
     .dish {
-        @include opacity_appearance; 
+        @include appearance_dish; 
         animation-delay: 1200ms;
-    }
-}
-
-
-@keyframes appearance_dish {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
