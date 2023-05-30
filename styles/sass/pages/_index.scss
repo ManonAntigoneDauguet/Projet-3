@@ -198,9 +198,7 @@
 /******** Animation loader *************/
 .index_body header, .index_body footer, .index_body section {
     opacity: 0;
-    animation: opacity_appearance 1000ms both;
-    animation-timing-function: ease-in-out; 
-    animation-delay: 3s;
+    animation: opacity_appearance 1000ms both ease-in-out 3s;
 }
 .index_body .loader_main {
     position: fixed;
