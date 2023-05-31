@@ -1,18 +1,19 @@
 // Outils
-@import "../sass/utils/variables";
-@import "../sass/utils/mixins";
-@import "../sass/utils/fonctions";
-@import "../sass/utils/keyframes";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/fonctions";
+@import "./utils/keyframes";
 
 // Base et layouts
-@import "../sass/base";
-@import "../sass/layouts/header";
-@import "../sass/layouts/footer";
+@import "./base";
+@import "./layouts/header";
+@import "./layouts/footer";
 
 // Components
-@import "../sass/components/buttons";
-@import "../sass/components/animation_heart";
+@import "./components/buttons";
+@import "./components/animation_heart";
+@import "./components/loader";
 
 // Pages
-@import "../sass/pages/index";
-@import "../sass/pages/pages_restaurants";
+@import "./pages/index";
+@import "./pages/pages_restaurants";

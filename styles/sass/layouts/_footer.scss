@@ -31,13 +31,13 @@ footer {
         display: grid;
         grid-template-columns: 22px auto;
         img {
-            columns: 1 / 2;
+            grid-column: 1 / 2;
             height: 13px;
             position: relative;
             top: 3px;
         }
         span {
-            columns: 2 / 3;
+            grid-column: 2 / 3;
         }
     }
     &--1 {
