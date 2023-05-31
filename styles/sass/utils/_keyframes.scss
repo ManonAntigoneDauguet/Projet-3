@@ -1,0 +1,42 @@
+/* Keyframes liées au loader principal */
+@keyframes primary_loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes secondary_loader {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+/* Keyframes liées aux apparitions et dispartions en fondu */
+@keyframes opacity_appearance {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity_disappaerance {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

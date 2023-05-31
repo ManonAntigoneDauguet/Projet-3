@@ -1,0 +1,193 @@
+// *********** Photo du restaurant en présentation **********//
+.illustration_restaurant {
+    position: relative;
+    height: 220px;
+    img {
+        height: 275px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        @include desktop-and-more {
+            height: 420px;
+            object-position: 50% 60%;
+        }        
+    }
+    @include desktop-and-more {
+        height: 368px;
+    }
+}
+
+//*************** Contenu écrit de la page ***************//
+.carte_restaurant {
+    background-color: $background-color;
+    padding: 10px 13px 40px 13px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    &__title {
+        padding-right: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .animation_heart { 
+            // reste du code concerné dans le dossier "components"
+            bottom: 10px;
+        }
+        @include desktop-and-more {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: center;
+            gap: 24px;
+        }
+    }
+    .button--main { 
+        // reste du code concerné dans le dossier "components"
+        margin-top: 45px;
+        top: 10px;
+        a {
+            padding: 16px 48px;
+        }
+    }
+    @include desktop-and-more {
+        min-width: map-get($breakpoints, laptop);
+        max-width: 1087px; 
+        margin: auto;
+    }
+}
+
+//************** Sections "entrées", "plats" et "désserts" ******//
+.carte_restaurant__menu {
+    position: relative;
+    &__title {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 22px;
+    }
+    &__subtitle {
+        width: 40px;
+        position: absolute;
+        top: 17px;
+        left: 0px;
+        border: 2px solid $color--tertiary;
+        @include desktop-and-more {
+            left: 210px;
+        }
+    }
+    + .carte_restaurant__menu {
+        margin-top: 40px;
+    }
+    @include desktop-and-more {
+        padding-left: 210px;
+        padding-right: 210px;
+    }
+}
+
+.list_dish {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .dish {
+        position: relative;
+        background-color: white;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        height: 69px;
+        &__txt {
+            padding: 12px 15px;   
+            line-height: 21px;              
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &__name {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            &__description {
+                font-size: 15px;
+                font-weight: 300;
+            }               
+        }
+        &__price {
+            position: absolute;
+            right: 15px;
+            top: 18px;
+            font-weight: 700;
+            transform: translateX(0);
+        }
+        &__checkbox {
+            opacity: 0;
+            min-width: 59px;
+            height: 69px;
+            background-color: $color--tertiary;
+            box-sizing: border-box;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align: center;
+            padding: 24px 10px;
+            img {
+                height: 20px;
+            }
+        }
+    }
+}
+
+//********** Animation de la sélection des plats ********//
+.dish {
+    &:hover {
+        .dish__price {
+            transform: translateX(-59px);
+            transition: all 400ms ease-in-out;
+        }
+        .dish__checkbox {
+            opacity: 1;
+            margin-left: 50px;
+            transition: all 400ms ease-in-out 200ms;
+        }
+    }   
+    &:not(:hover) {
+        .dish__price {
+            transform: translateX(0);
+            transition: all 400ms ease-in-out 200ms;
+        }
+        .dish__checkbox {
+            opacity: 0;
+            transition: all 400ms ease-in-out 0ms;
+        }
+    } 
+}
+
+//*********** Animation de l'apparition des plats ******//
+.starters {
+    h3, hr {
+        @include appearance_dish;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 400ms;
+    }
+}
+
+.main_course {
+    h3, hr {
+        @include appearance_dish; 
+        animation-delay: 0ms;   
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 800ms;
+    }
+}
+
+.dessert {
+    h3, hr {
+        @include appearance_dish;   
+        animation-delay: 0ms;     
+    }
+    .dish {
+        @include appearance_dish; 
+        animation-delay: 1200ms;
+    }
+}

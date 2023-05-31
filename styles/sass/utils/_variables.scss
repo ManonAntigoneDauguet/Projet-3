@@ -1,0 +1,15 @@
+/* variables liées aux polices */
+$font-family--title: 'Shrikhand', cursive;
+$font-family--text: 'Roboto', sans-serif;
+
+/* variables liées aux couleurs */
+$color--primary: #9356DC;
+$color--secondary: #FF79DA;
+$color--tertiary: #99E2D0;
+$background-color: rgb(247,247,247); //#F7F7F7
+
+/* autres */
+$breakpoints: (
+    laptop: 768px,
+    desktop: 1024px
+); 

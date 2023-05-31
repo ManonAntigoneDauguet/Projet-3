@@ -1,0 +1,196 @@
+// ********* 1ère section : Présentation ********//
+.presentation {
+    background-color: $background-color;
+    padding-bottom: 40px;
+    &__localisation {
+        background-color: color_subHeader($background-color);
+        height: 45px;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);  
+        font-weight: 500;
+        display: flex;
+        gap: 17px;
+        justify-content: center;
+        align-items: center;
+    }    
+    &__resume {
+        text-align: center;  
+        margin-top: 32px;   
+        position: relative;
+        h2 {
+            padding: 0 42px 0 42px;
+            position: relative;
+            top: 8px;
+            line-height: 28.13px;
+            @include desktop-and-more {
+                font-size: 40px;
+            }
+        }   
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            padding: 0 17px 27px 17px;
+        }          
+    }
+    .button--main {
+        // reste du code concerné dans le dossier "components"
+        a {
+            padding: 13px 18px;            
+        }
+    }
+}
+
+// 2ème et 3ème section : Fonctionnement et Restaurants *******//
+.restaurants, .functioning {
+    &__content {
+        @include desktop-and-more {
+            min-width: map-get($breakpoints, laptop);
+            max-width: 1087px; 
+            margin: auto;
+        }        
+    }
+    h2 {
+        @include desktop-and-more {
+            padding-bottom: 20px;
+        }        
+    }
+}
+
+// ********** 2ème section : Fonctionnement *********//
+.functioning {
+    margin-top: 47px;
+    margin-bottom: 40px;
+    padding: 0px 0px 20px 20px;
+    background-color: white;
+    .list_filters {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 10px;
+        .filter {
+            position: relative;
+            margin-left: 12px;
+            margin-right: 12px;
+            background-color: $background-color;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 28px 30px 27.5px 30px;
+            &__number {
+                position: absolute;
+                font-size: 14px;
+                bottom: 25px;
+                left: -14px;
+                color: white;
+                background-color: $color--primary;
+                border-radius: 20px;
+                padding: 4px 8.2px;
+            }
+            &__icon {
+                height: 16px;
+            }
+            &__title {
+                position: absolute;
+                left: 62px;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            @include desktop-and-more {
+                width: 322px;
+            }
+        }
+        @include desktop-and-more {
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
+}
+
+// ********* 3ème section : Restaurants *************//
+.restaurants {
+    background-color: $background-color;
+    padding: 25px 20px 65px 20px;
+    .list_restaurants {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include laptop-and-more {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include desktop-and-more {
+            gap: 50px;
+        }
+    }
+    @include desktop-and-more {
+        padding-bottom: 30px;
+    }
+}
+.restaurant {
+    position: relative;
+    &__illustration {
+        height: 168px;
+        object-fit: cover;
+        object-position: 50% 100%;
+        width: 100%;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        @include desktop-and-more {
+            height: 153px;
+            object-position: 50% 72%;
+        }
+    }
+    .portrait_picture {
+        object-position: 50% 62%;
+        @include desktop-and-more {
+            object-position: 50% 56%;
+        }
+    }
+    &__content {
+        padding: 10px 30px 14px 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        i {
+            font-size: 21px;
+            font-weight: 300;
+        }   
+        img { 
+            height: 16px;
+        }     
+        .restaurant__txt {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            &__title {
+                font-weight: 700;
+                font-size: 18px;
+            }
+            &__subtitle {
+                font-size: 17px;
+                font-weight: 300;
+            }
+        }
+    }
+    &__new {
+        position: absolute;
+        background: $color--tertiary;
+        right: 15px;
+        top: 15px;
+        padding: 7px 9px;
+    }
+    @include laptop-and-more {
+        width: 45%;
+    }
+}
+.restaurant__favorite {
+    display: flex;
+    justify-content: end;
+    .animation_heart { 
+        // reste du code concerné dans le dossier "components"
+        right: 45px;
+        bottom: 50px;
+    }
+}

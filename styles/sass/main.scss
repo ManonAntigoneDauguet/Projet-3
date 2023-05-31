@@ -1,4 +1,19 @@
-@import "../sass/utils/variables.scss";
-@import "../sass/utils/variables.scss";
+// Outils
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/fonctions";
+@import "./utils/keyframes";
 
-@import "../sass/base.scss";
+// Base et layouts
+@import "./base";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// Components
+@import "./components/buttons";
+@import "./components/animation_heart";
+@import "./components/loader";
+
+// Pages
+@import "./pages/index";
+@import "./pages/pages_restaurants";

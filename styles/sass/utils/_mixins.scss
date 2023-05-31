@@ -1,0 +1,24 @@
+/* Mixins liées aux media queries */
+@mixin laptop-only {
+    @media all and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+@mixin laptop-and-more {
+    @media all and (min-width: map-get($breakpoints, laptop)) {
+        @content;
+    }
+}
+@mixin desktop-and-more {
+    @media all and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+/* Mixins liées aux animation */
+@mixin appearance_dish {
+    opacity: 0;
+    transform-origin: left;
+    animation: opacity_appearance 1000ms both;
+    animation-timing-function: ease-in-out; 
+}
