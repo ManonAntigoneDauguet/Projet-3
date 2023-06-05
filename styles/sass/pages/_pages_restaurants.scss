@@ -94,12 +94,12 @@
         display: flex;
         justify-content: space-between;
         height: 69px;
+        overflow: hidden;
+        white-space: nowrap;
         &__txt {
             padding: 12px 15px;   
-            line-height: 21px;              
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            line-height: 21px;      
+            max-width: 63%;
             &__name {
                 font-weight: 500;
                 font-size: 18px;
@@ -109,53 +109,47 @@
                 font-weight: 300;
             }               
         }
-        &__price {
-            position: absolute;
-            right: 15px;
-            top: 18px;
-            font-weight: 700;
-            transform: translateX(0);
-        }
-        &__checkbox {
-            opacity: 0;
-            min-width: 59px;
-            height: 69px;
-            background-color: $color--tertiary;
-            box-sizing: border-box;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            text-align: center;
-            padding: 24px 10px;
-            img {
-                height: 20px;
-            }
-        }
     }
 }
 
+.dish__selected {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    transform: translateX(59px);
+    transition: all 400ms ease-in-out;
+    overflow: hidden;  
+    &__price {
+        position: relative;
+        top: 18px;
+        font-weight: 700;
+        transform: translateX(0);
+    }
+    &__checkbox {
+        min-width: 59px;
+        height: 69px;
+        background-color: $color--tertiary;
+        box-sizing: border-box;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        padding: 24px 10px;
+        img {
+            height: 20px;
+        }
+    }    
+}
+
 //********** Animation de la sélection des plats ********//
-.dish {
-    &:hover {
-        .dish__price {
-            transform: translateX(-59px);
-            transition: all 400ms ease-in-out;
-        }
-        .dish__checkbox {
-            opacity: 1;
-            margin-left: 50px;
-            transition: all 400ms ease-in-out 200ms;
-        }
-    }   
-    &:not(:hover) {
-        .dish__price {
-            transform: translateX(0);
-            transition: all 400ms ease-in-out 200ms;
-        }
-        .dish__checkbox {
-            opacity: 0;
-            transition: all 400ms ease-in-out 0ms;
-        }
-    } 
+.dish:hover {
+    .dish__selected {
+        transform: translateX(0px);        
+    }
+    .dish__txt {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 
 //*********** Animation de l'apparition des plats ******//
